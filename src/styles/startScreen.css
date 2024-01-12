@@ -1,0 +1,76 @@
+.startScreen {
+  width: 100vw;
+  height: 100vh;
+  background: url("../assets/backGroundAnimation.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+}
+.startScreenHeading {
+  font-size: 4rem;
+  text-align: center;
+}
+.startButton {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.startButton:active {
+  transform: scale(0.8);
+}
+
+.infoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 1px 5px;
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+  color: wheat;
+  font-weight: 600;
+  transition: all 400ms;
+}
+.infoBtn:active {
+  transform: scale(0.8);
+}
+.gameDetails {
+  position: fixed;
+  bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+  background-color: black;
+  padding: 5px 10px;
+  animation: fadeIn 1000ms 0ms forwards;
+}
+.gameDetailsParagraph {
+  position: relative;
+}
+.closeGameDetails {
+  color: red;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
