@@ -7,10 +7,7 @@ export default function GameScreen({ setIsGameStarted }) {
   const dispatch = useGameDispatchContext();
   const [key, setKey] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
-
-  const selectedCards = gameStateValues.selectedCards;
   const gameOver = gameStateValues.gameOver;
-  console.log(selectedCards);
 
   function handleCardClick(cardId) {
     dispatch({

@@ -38,7 +38,6 @@ function gameReducer(state, action) {
     case "card-clicked": {
       const cardId = action.cardId;
       const clickedCard = cards.find((card) => card.id === cardId);
-      console.log(clickedCard);
       if (state.selectedCards.find((card) => card.id === cardId)) {
         return {
           ...state,
