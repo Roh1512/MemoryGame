@@ -73,7 +73,3 @@ export default function GameScreen({ setIsGameStarted }) {
     </div>
   );
 }
-
-GameScreen.propTypes = {
-  setIsGameStarted: PropTypes.func,
-};
