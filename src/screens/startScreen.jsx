@@ -29,7 +29,7 @@ export default function StartScreen({ setIsGameStarted }) {
           style={styleForInfo}
           onClick={() => setShowInfo(!showInfo)}
         >
-          Info&nbsp;<i className="bi bi-info-circle-fill"></i>
+          More Info&nbsp;<i className="bi bi-info-circle-fill"></i>
         </button>
         {showInfo && (
           <>
