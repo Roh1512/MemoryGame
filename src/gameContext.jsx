@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types";
 import { createContext, useContext, useReducer } from "react";
 import cards, { getRandomDistinctItems } from "./cards";
 import {
@@ -25,6 +26,9 @@ export default function GameContextProvider({ children }) {
     </GameContext.Provider>
   );
 }
+GameContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export function useGameContext() {
   return useContext(GameContext);
@@ -67,7 +71,6 @@ function gameReducer(state, action) {
         selectedCards: [],
       };
     }
-    // eslint-disable-next-line no-fallthrough
     default: {
       return state;
     }

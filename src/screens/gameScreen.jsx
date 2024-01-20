@@ -1,5 +1,6 @@
 import "../styles/gameScreen.css";
 import EndScreen from "./endScreen";
+import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useGameContext, useGameDispatchContext } from "../gameContext";
 export default function GameScreen({ setIsGameStarted }) {
@@ -72,3 +73,7 @@ export default function GameScreen({ setIsGameStarted }) {
     </div>
   );
 }
+
+GameScreen.propTypes = {
+  setIsGameStarted: PropTypes.func,
+};
