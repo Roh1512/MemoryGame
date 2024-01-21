@@ -26,9 +26,6 @@ function GameContextProvider({ children }) {
     </GameContext.Provider>
   );
 }
-GameContextProvider.propTypes = {
-  children: PropTypes.node,
-};
 
 export default GameContextProvider;
 
