@@ -1,5 +1,6 @@
+import PropTypes from "prop-types";
 import "../styles/endScreen.css";
-export default function EndScreen({ setIsGameStarted, setIsGameOver }) {
+function EndScreen({ setIsGameStarted, setIsGameOver }) {
   return (
     <>
       <div className="endScreenDiv">
@@ -32,3 +33,10 @@ export default function EndScreen({ setIsGameStarted, setIsGameOver }) {
     </>
   );
 }
+
+EndScreen.propTypes = {
+  setIsGameStarted: PropTypes.func,
+  setIsGameOver: PropTypes.func,
+};
+
+export default EndScreen;

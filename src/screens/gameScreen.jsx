@@ -3,7 +3,7 @@ import EndScreen from "./endScreen";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useGameContext, useGameDispatchContext } from "../gameContext";
-export default function GameScreen({ setIsGameStarted }) {
+function GameScreen({ setIsGameStarted }) {
   const gameStateValues = useGameContext();
   const dispatch = useGameDispatchContext();
   const [key, setKey] = useState(0);
@@ -73,3 +73,9 @@ export default function GameScreen({ setIsGameStarted }) {
     </div>
   );
 }
+
+GameScreen.propTypes = {
+  setIsGameStarted: PropTypes.func,
+};
+
+export default GameScreen;

@@ -1,6 +1,7 @@
+import { PropTypes } from "prop-types";
 import "../styles/startScreen.css";
 import { useState } from "react";
-export default function StartScreen({ setIsGameStarted }) {
+function StartScreen({ setIsGameStarted }) {
   const [showInfo, setShowInfo] = useState(false);
   let styleForInfo;
   if (!showInfo) {
@@ -48,3 +49,9 @@ export default function StartScreen({ setIsGameStarted }) {
     </>
   );
 }
+
+StartScreen.propTypes = {
+  setIsGameStarted: PropTypes.func,
+};
+
+export default StartScreen;

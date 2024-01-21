@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { createContext, useContext, useReducer } from "react";
 import cards, { getRandomDistinctItems } from "./cards";
 import {
@@ -15,7 +16,7 @@ const initialState = {
   selectedCards: [],
 };
 
-export default function GameContextProvider({ children }) {
+function GameContextProvider({ children }) {
   const [cardsState, dispatch] = useReducer(gameReducer, initialState);
   return (
     <GameContext.Provider value={cardsState}>
@@ -25,6 +26,11 @@ export default function GameContextProvider({ children }) {
     </GameContext.Provider>
   );
 }
+GameContextProvider.propTypes = {
+  children: PropTypes.node,
+};
+
+export default GameContextProvider;
 
 export function useGameContext() {
   return useContext(GameContext);
